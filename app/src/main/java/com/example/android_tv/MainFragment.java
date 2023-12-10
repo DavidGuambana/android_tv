@@ -98,28 +98,27 @@ public class MainFragment extends BrowseSupportFragment {
             rowsAdapter.add(new ListRow(header, listRowAdapter));
         }
 
-            // Agrega la fila de la lista completa de videos al final
-            HeaderItem gridHeader = new HeaderItem(MovieList.MOVIE_CATEGORY.length, "LISTA COMPLETA");
-            ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(new CardPresenter());
+        // Agrega la fila de la lista completa de videos al final
+        HeaderItem gridHeader = new HeaderItem(MovieList.MOVIE_CATEGORY.length, "LISTA COMPLETA");
+        ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(new CardPresenter());
 
-            // Itera sobre todas las categorías
-            for (int categoryIndex = 0; categoryIndex < MovieList.MOVIE_CATEGORY.length; categoryIndex++) {
-                // Obtén la lista de películas para la categoría actual
-                List<Movie> categoryMovies = MovieList.getList(categoryIndex);
+        // Itera sobre todas las categorías
+        for (int categoryIndex = 0; categoryIndex < MovieList.MOVIE_CATEGORY.length; categoryIndex++) {
+            // Obtén la lista de películas para la categoría actual
+            List<Movie> categoryMovies = MovieList.getList(categoryIndex);
 
-                // Baraja la lista de películas si no es la primera categoría
-                if (categoryIndex != 0) {
-                    Collections.shuffle(categoryMovies);
-                }
-
-                // Agrega todas las películas de la categoría actual al adaptador de la fila de preferencias
-                for (Movie movie : categoryMovies) {
-                    gridRowAdapter.add(movie);
-                }
+            // Baraja la lista de películas si no es la primera categoría
+            if (categoryIndex != 0) {
+                Collections.shuffle(categoryMovies);
             }
 
-        rowsAdapter.add(new ListRow(gridHeader, gridRowAdapter));
+            // Agrega todas las películas de la categoría actual a la lista completa de videos
+            for (Movie movie : categoryMovies) {
+                gridRowAdapter.add(movie);
+            }
+        }
 
+        rowsAdapter.add(new ListRow(gridHeader, gridRowAdapter));
 
         // Establece el adaptador en la interfaz de usuario
         setAdapter(rowsAdapter);

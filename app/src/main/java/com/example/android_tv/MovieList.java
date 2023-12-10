@@ -9,9 +9,9 @@ public final class MovieList {
     private static long count = 0;
     public static final String MOVIE_CATEGORY[] = {
             "Software Seguro",
-            "Novedades Tecnológicas",
-            "Herramientas Tecnologías",
-            "Experiencias Personales",
+            "Novedades\nTecnológicas",
+            "Herramientas\nTecnologías",
+            "Experiencias\nPersonales",
             "Inteligencia Artificial"
     };
 
@@ -125,7 +125,7 @@ public final class MovieList {
                         "Top 10 Tendencias Tecnológicas 2023 - La Tecnología Del Futuro",
                         "Top 10 Tendencias Tecnológicas 2023: ¡Prepárate para conocer las innovaciones más emocionantes de este año! En nuestro video, te mostraremos las tendencias en inteligencia artificial, realidad virtual, ciberseguridad y mucho más. En inteligencia artificial, veremos cómo la automatización de aprendizaje profundo y el aprendizaje automático están cambiando la forma en que las empresas manejan sus datos. La realidad virtual y aumentada se están convirtiendo en una herramienta valiosa para la educación y el entretenimiento.",
                         "Omar Castaneda",
-                        "https://youtu.be/iYTLYUILcYI",
+                        "https://fb.watch/oQEP0dALF1/",
                         "https://img.youtube.com/vi/iYTLYUILcYI/maxresdefault.jpg",
                         "https://www.computerworld.es/archivos/202209/1540525718623.jpg",
                         categoryIndex));
@@ -173,7 +173,7 @@ public final class MovieList {
                         "Grand Theft Auto VI Trailer 1",
                         "Song: Love Is A Long Road Artist: Tom Petty Written by Thomas Earl Petty and Michael W. Campbell Published by Universal Music Works on behalf of Wild Gator Music (GMR) and Wixen Music Publishing, Inc. as agent for Gone Gator Music (ASCAP) and NotoriousJBPSongs (ASCAP) Courtesy of Universal Music Enterprises, a Division of UMG Recordings, Inc.",
                 "Rockstar Games",
-                        "https://youtu.be/_go7DinWXAo",
+                        "https://www.youtube.com/watch?v=QdBZY2fkU-0&ab_channel=RockstarGames",
                         "https://img.youtube.com/vi/QdBZY2fkU-0/maxresdefault.jpg",
                         "https://www.computerworld.es/archivos/202209/1540525718623.jpg",
                         categoryIndex));
@@ -196,11 +196,11 @@ public final class MovieList {
                         "https://www.teknei.com/wp-content/uploads/2021/11/v617batch2-kul-25-technology.jpg",
                         categoryIndex));
                 list.add(buildMovieInfo(
-                        "Top 10 Tendencias Tecnológicas 2023 - La Tecnología Del Futuro\n",
-                        "Top 10 Tendencias Tecnológicas 2023: ¡Prepárate para conocer las innovaciones más emocionantes de este año! En nuestro video, te mostraremos las tendencias en inteligencia artificial, realidad virtual, ciberseguridad y mucho más. ",
-                        "Omar Castaneda",
-                        "https://www.youtube.com/watch?v=iYTLYUILcYI&ab_channel=OmarCastaneda",
-                        "https://img.youtube.com/vi/iYTLYUILcYI/maxresdefault.jpg",
+                        "LAS 6 NUEVAS TECNOLOGÍAS del FUTURO que CAMBIARÁN EL MUNDO en 5 AÑOS (TE VAN A SORPRENDER)",
+                        "✨ ¡Descubre las TECNOLOGÍAS DEL FUTURO que están a punto de transformar nuestro mundo! En este video, exploramos las 10 innovaciones más emocionantes que cambiarán todo, desde cómo trabajamos hasta cómo vivimos. ¡Prepárate para un viaje al futuro!",
+                        "SAEID",
+                        "https://www.youtube.com/watch?v=O5FruMtoaGI&ab_channel=SAEID",
+                        "https://img.youtube.com/vi/O5FruMtoaGI/maxresdefault.jpg",
                         "https://www.teknei.com/wp-content/uploads/2021/11/v617batch2-kul-25-technology.jpg",
                         categoryIndex));
                 list.add(buildMovieInfo(

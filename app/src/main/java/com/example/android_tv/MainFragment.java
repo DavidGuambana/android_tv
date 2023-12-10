@@ -98,14 +98,28 @@ public class MainFragment extends BrowseSupportFragment {
             rowsAdapter.add(new ListRow(header, listRowAdapter));
         }
 
-        // Agrega la fila de preferencias al final
-        HeaderItem gridHeader = new HeaderItem(MovieList.MOVIE_CATEGORY.length, "PREFERENCES");
-        GridItemPresenter mGridPresenter = new GridItemPresenter();
-        ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(mGridPresenter);
-        gridRowAdapter.add(getResources().getString(R.string.grid_view));
-        gridRowAdapter.add(getString(R.string.error_fragment));
-        gridRowAdapter.add(getResources().getString(R.string.personal_settings));
+            // Agrega la fila de la lista completa de videos al final
+            HeaderItem gridHeader = new HeaderItem(MovieList.MOVIE_CATEGORY.length, "LISTA COMPLETA");
+            ArrayObjectAdapter gridRowAdapter = new ArrayObjectAdapter(new CardPresenter());
+
+            // Itera sobre todas las categorías
+            for (int categoryIndex = 0; categoryIndex < MovieList.MOVIE_CATEGORY.length; categoryIndex++) {
+                // Obtén la lista de películas para la categoría actual
+                List<Movie> categoryMovies = MovieList.getList(categoryIndex);
+
+                // Baraja la lista de películas si no es la primera categoría
+                if (categoryIndex != 0) {
+                    Collections.shuffle(categoryMovies);
+                }
+
+                // Agrega todas las películas de la categoría actual al adaptador de la fila de preferencias
+                for (Movie movie : categoryMovies) {
+                    gridRowAdapter.add(movie);
+                }
+            }
+
         rowsAdapter.add(new ListRow(gridHeader, gridRowAdapter));
+
 
         // Establece el adaptador en la interfaz de usuario
         setAdapter(rowsAdapter);

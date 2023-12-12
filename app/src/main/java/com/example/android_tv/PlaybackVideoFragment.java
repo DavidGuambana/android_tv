@@ -29,9 +29,6 @@ public class PlaybackVideoFragment extends Fragment {
                 ViewGroup.LayoutParams.MATCH_PARENT
         ));
 
-        // Asignar un ID al WebView programáticamente
-        webView.setId(View.generateViewId());
-
         // Habilitar JavaScript (necesario para la reproducción de YouTube)
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -44,12 +41,6 @@ public class PlaybackVideoFragment extends Fragment {
         webView.loadUrl("https://www.youtube.com/embed/" + videoId);
 
         return webView;
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        // Puedes manejar la pausa según tus necesidades
     }
 
     // Método para extraer la ID del video de una URL de YouTube
@@ -89,5 +80,9 @@ public class PlaybackVideoFragment extends Fragment {
             }
         }
         return videoId;
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
     }
 }

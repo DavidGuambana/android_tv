@@ -95,10 +95,10 @@ public final class MovieList {
                         "https://overflow.pe/wp-content/uploads/2021/06/seguridad-en-internet.jpg",
                         categoryIndex));
                 list.add(buildMovieInfo(
-                        "DESARROLLO DE SOFTWARE SEGURO. JOSSIMAR MIRANDA",
+                        "DESARROLLO DE SOFThttps://www.youtube.comWARE SEGURO. JOSSIMAR MIRANDA",
                         "DESARROLLO DE SOFTWARE SEGURO. JOSSIMAR MIRANDA",
                         "Jossimar Miranda",
-                        "https://www.youtube.com/watch?v=OYzU-xiVOVA",
+                        "/watch?v=OYzU-xiVOVA",
                         "https://img.youtube.com/vi/OYzU-xiVOVA/sddefault.jpg",
                         "https://overflow.pe/wp-content/uploads/2021/06/seguridad-en-internet.jpg",
                         categoryIndex));
